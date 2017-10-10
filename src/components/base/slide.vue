@@ -1,7 +1,6 @@
 <style lang="less">
-    .bg{ position: fixed;top: 0;left: 0;right: 0;bottom: 0;background-color: rgba(0,0,0,.2)}
     .zc-slide{ position: fixed;top: 0;bottom: 0;right: 0;width: 300px;background-color: #fff;
-        box-shadow: -2px 0px 6px -2px rgba(0, 0, 0, 0.2);
+        box-shadow: -2px 0px 6px -2px rgba(0, 0, 0, 0.2);z-index: 100;
         .zc-slide-head{
             height: 45px;line-height: 45px;box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
             padding: 0 20px;
@@ -18,23 +17,27 @@
 </style>
 
 <template> 
-    <transition name="popup-animate-right">
-        <div class="zc-slide transition" v-show="show">
-            <div class="zc-slide-head clearfix">
-                <span class="fl">{{title}}</span>
-                <i class="el-icon-circle-close fr" @click="close"></i>
-            </div> 
-            <div class="zc-slide-content">
-                <slot></slot> 
+    <div>
+        <overlay :show="mutableShow" :opacity="0.5" :click="close"></overlay>
+        <transition name="popup-animate-right">
+            <div class="zc-slide transition" v-show="mutableShow">
+                <div class="zc-slide-head clearfix">
+                    <span class="fl">{{title}}</span>
+                    <i class="el-icon-circle-close fr" @click="close"></i>
+                </div> 
+                <div class="zc-slide-content">
+                    <slot></slot> 
+                </div>
+                <div class="zc-slide-foot">
+                    <el-button type="success">确定</el-button>
+                    <el-button type="danger">取消</el-button>
+                </div>
             </div>
-            <div class="zc-slide-foot">
-                <el-button type="success">确定</el-button>
-                <el-button type="danger">取消</el-button>
-            </div>
-        </div>
-    </transition> 
+        </transition> 
+    </div>
 </template>
 <script type="text/ecmascript-6">
+  import Overlay from './Overlay'
   export default {
     props: {
       show: {
@@ -46,12 +49,25 @@
         default: '这是默认标题哦'
       }
     },
+    data () {
+        return {
+            mutableShow: this.show
+        }
+    },
+    components: {
+        Overlay
+    },
     mounted() {
       
     },
     methods: {
-        close(){
-            this.$emit('close',false)
+        open () {
+            this.mutableShow = true;
+            this.$emit('open', this);
+        },
+        close () {
+            this.mutableShow = false;
+            this.$emit('close', this);
         }
     }
   }

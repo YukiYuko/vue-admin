@@ -1,7 +1,7 @@
 <template>
   <div class="baseModal">
-      <el-button type="danger" @click="show = true">右侧弹窗</el-button>
-      <slide :show="show" @close="close"></slide>
+      <el-button type="danger" @click.native="$refs.pop1.open()">打开右侧弹窗</el-button>
+      <slide ref="pop1"></slide>
   </div>
 </template>
 
@@ -20,9 +20,7 @@ export default {
         
     },
     methods: {
-        close(show){
-            this.show = show;
-        }
+        
     }
 }
 </script>
