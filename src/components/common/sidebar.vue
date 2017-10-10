@@ -29,6 +29,10 @@
                     <el-menu-item index="basecharts">基础图表</el-menu-item>
                     <el-menu-item index="mixcharts">混合图表</el-menu-item>
                 </el-submenu>
+                <el-submenu index="5">
+                    <template slot="title"><i class="el-icon-star-on"></i>弹窗</template>
+                    <el-menu-item index="basemodal">右侧弹窗</el-menu-item>
+                </el-submenu>
             </el-menu>
         </div>
         <a class="logOut">退出登录</a>
