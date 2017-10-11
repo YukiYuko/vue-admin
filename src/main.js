@@ -8,6 +8,11 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
+import '../static/UE/ueditor.config.js'
+import '../static/UE/ueditor.all.js'
+import '../static/UE/lang/zh-cn/zh-cn.js'
+import '../static/UE/ueditor.parse.js'
+
 // // 全局使用封装的ajax
 // import ajax from "./server"; 
 // Vue.use(ajax);

@@ -56,11 +56,12 @@
                 </el-form-item>
             </el-form>
         </div>
-
+        <UE :defaultMsg="defaultMsg" :config="config" ref="ue"></UE>
     </div>
 </template>
 
 <script>
+import UE from '@/components/base/Ue.vue';
   export default {
     data() {
       return {
@@ -97,9 +98,15 @@
           desc: [
             { required: true, message: '请填写活动形式', trigger: 'blur' }
           ]
+        },
+        defaultMsg: '这里是UE测试',
+        config: {
+          initialFrameWidth: null,
+          initialFrameHeight: 350
         }
       };
     },
+    components: {UE},
     methods: {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
@@ -113,6 +120,15 @@
       },
       resetForm(formName) {
         this.$refs[formName].resetFields();
+      },
+      getUEContent() {
+        let content = this.$refs.ue.getUEContent();
+        this.$notify({
+          title: '获取成功，可在控制台查看！',
+          message: content,
+          type: 'success'
+        });
+        console.log(content)
       }
     }
   }
