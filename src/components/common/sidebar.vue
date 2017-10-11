@@ -11,6 +11,9 @@
         <div class="menu">
             <el-menu :default-active="onRoutes" class="el-menu-vertical-demo menu-fff" unique-opened router>
                 <el-menu-item index="/">
+                    <i class="el-icon-setting"></i>欢迎页
+                </el-menu-item>
+                <el-menu-item index="/home">
                     <i class="el-icon-setting"></i>首页
                 </el-menu-item>
                 <el-submenu index="2">
@@ -32,6 +35,15 @@
                 <el-submenu index="5">
                     <template slot="title"><i class="el-icon-star-on"></i>弹窗</template>
                     <el-menu-item index="basemodal">右侧弹窗</el-menu-item>
+                </el-submenu>
+                <el-submenu index="6">
+                    <template slot="title"><i class="el-icon-star-on"></i>瀑布流布局</template>
+                    <el-menu-item index="basemasonry">columns</el-menu-item>
+                    <el-menu-item index="baseMasonryflex">flex</el-menu-item>
+                </el-submenu>
+                <el-submenu index="7">
+                    <template slot="title"><i class="el-icon-star-on"></i>css3</template>
+                    <el-menu-item index="textstroke">text-stroke实现文本描边效果</el-menu-item>
                 </el-submenu>
             </el-menu>
         </div>
