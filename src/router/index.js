@@ -7,6 +7,7 @@ import BaseForm from '@/views/BaseForm'
 import BaseModal from '@/views/BaseModal'
 import BaseMasonry from '@/views/BaseMasonry'
 import BaseMasonryFlex from '@/views/BaseMasonryFlex'
+import BaseCharts from '@/views/BaseCharts'
 import TextStroke from '@/views/css3/TextStroke'
 
 Vue.use(Router)
@@ -47,6 +48,11 @@ const router = new Router({
       path: '/baseMasonryflex',
       name: 'baseMasonryflex',
       component: BaseMasonryFlex
+    },
+    {
+      path: '/basecharts',
+      name: 'basecharts',
+      component: BaseCharts
     },
     {
       path: '/textstroke',
