@@ -50,7 +50,7 @@
                     <el-menu-item index="requestAnimationFrame">requestAnimationFrame</el-menu-item>
                     <el-menu-item index="canvas">canvas</el-menu-item>
                 </el-submenu>
-                <el-submenu index="8">
+                <el-submenu index="9">
                     <template slot="title"><i class="el-icon-star-on"></i>无限滚动</template>
                     <el-menu-item index="VueInfiniteScroll">VueInfiniteScroll</el-menu-item>
                     <el-menu-item index="VueInfiniteLoading">VueInfiniteLoading</el-menu-item>
@@ -92,7 +92,7 @@ export default {
             .admin{ 
                 text-align: center;
                 img{ width: 60px;border-radius: 50%;}
-                h2{ color: #333;}
+                h2{ color: #333;font-size: 16px;margin: 10px 0}
                 p{ color: #999}
             }
         }
