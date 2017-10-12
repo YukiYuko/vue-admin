@@ -45,6 +45,16 @@
                     <template slot="title"><i class="el-icon-star-on"></i>css3</template>
                     <el-menu-item index="textstroke">text-stroke实现文本描边效果</el-menu-item>
                 </el-submenu>
+                <el-submenu index="8">
+                    <template slot="title"><i class="el-icon-star-on"></i>js</template>
+                    <el-menu-item index="requestAnimationFrame">requestAnimationFrame</el-menu-item>
+                    <el-menu-item index="canvas">canvas</el-menu-item>
+                </el-submenu>
+                <el-submenu index="8">
+                    <template slot="title"><i class="el-icon-star-on"></i>无限滚动</template>
+                    <el-menu-item index="VueInfiniteScroll">VueInfiniteScroll</el-menu-item>
+                    <el-menu-item index="VueInfiniteLoading">VueInfiniteLoading</el-menu-item>
+                </el-submenu>
             </el-menu>
         </div>
         <a class="logOut">退出登录</a>
@@ -85,6 +95,24 @@ export default {
                 h2{ color: #333;}
                 p{ color: #999}
             }
+        }
+        .menu{
+            position: absolute;top: 220px;left: 0;right: 0;bottom: 80px;overflow-y: scroll;
+        }
+        /*滚动条样式*/
+        .menu::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 4px;
+        }
+        .menu::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.2);
+        }
+        .menu::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 0;
+            background: rgba(0,0,0,0.1);
         }
         .logOut{ position: absolute;bottom: 20px;width: 100%;box-sizing: border-box;left: 0;
             padding: 0 20px;line-height: 40px;color: #666;font-size: 16px;display: block;

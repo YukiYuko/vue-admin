@@ -8,7 +8,15 @@ import BaseModal from '@/views/BaseModal'
 import BaseMasonry from '@/views/BaseMasonry'
 import BaseMasonryFlex from '@/views/BaseMasonryFlex'
 import BaseCharts from '@/views/BaseCharts'
+// csss3
 import TextStroke from '@/views/css3/TextStroke'
+// JS
+import RequestAnimationFrame from '@/views/js/RequestAnimationFrame'
+import Canvas from '@/views/js/Canvas'
+// 无限滚动
+import VueInfiniteScroll from '@/views/VueInfiniteScroll'
+import VueInfiniteLoading from '@/views/VueInfiniteLoading'
+
 
 Vue.use(Router)
 
@@ -54,11 +62,34 @@ const router = new Router({
       name: 'basecharts',
       component: BaseCharts
     },
+    // css3
     {
       path: '/textstroke',
       name: 'textstroke',
       component: TextStroke
-    }
+    },
+    // js
+    {
+      path: '/requestAnimationFrame',
+      name: 'requestAnimationFrame',
+      component: RequestAnimationFrame
+    },
+    {
+      path: '/canvas',
+      name: 'canvas',
+      component: Canvas
+    },
+    // 无限滚动
+    {
+      path: '/VueInfiniteScroll',
+      name: 'VueInfiniteScroll',
+      component: VueInfiniteScroll
+    },
+    {
+      path: '/VueInfiniteLoading',
+      name: 'VueInfiniteLoading',
+      component: VueInfiniteLoading
+    },
   ]
 })
 export default router;
