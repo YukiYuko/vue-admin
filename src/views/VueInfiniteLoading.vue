@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="width:600px;margin:auto;">
         <p v-for="(item,index) in list" :key="index" class="basic-list-item">
             Line:
             <span v-text="item"></span>
@@ -10,6 +10,7 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading';
+const len = parseInt(window.innerHeight/40)+2;
 export default {
     data() {
         return {
@@ -20,7 +21,7 @@ export default {
         infiniteHandler($state) {
             setTimeout(() => {
                 const temp = [];
-                for (let i = this.list.length + 1; i <= this.list.length + 20; i++) {
+                for (let i = this.list.length + 1; i <= this.list.length + len; i++) {
                     temp.push(i);
                 }
                 this.list = this.list.concat(temp);

@@ -8,8 +8,12 @@ import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 
+import 'vue-touch-ripple/component.css'
 import infiniteScroll from 'vue-infinite-scroll'
 Vue.use(infiniteScroll)
+
+import TouchRipple from 'vue-touch-ripple'
+Vue.use(TouchRipple);
 
 import '../static/UE/ueditor.config.js'
 import '../static/UE/ueditor.all.js'

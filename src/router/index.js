@@ -13,6 +13,7 @@ import TextStroke from '@/views/css3/TextStroke'
 // JS
 import RequestAnimationFrame from '@/views/js/RequestAnimationFrame'
 import Canvas from '@/views/js/Canvas'
+import Calculator from '@/views/js/Calculator'
 // 无限滚动
 import VueInfiniteScroll from '@/views/VueInfiniteScroll'
 import VueInfiniteLoading from '@/views/VueInfiniteLoading'
@@ -78,6 +79,11 @@ const router = new Router({
       path: '/canvas',
       name: 'canvas',
       component: Canvas
+    },
+    {
+      path: '/calculator',
+      name: 'calculator',
+      component: Calculator
     },
     // 无限滚动
     {

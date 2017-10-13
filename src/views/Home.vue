@@ -109,7 +109,8 @@
       <el-button class="fr bg-color-fff transition" type="info">信息按钮</el-button>
     </div>
     <div class="main">
-      <blockquote class="quote">布局</blockquote>
+      <h1 v-touch-ripple>H1</h1>
+      <blockquote class="quote" v-touch-ripple>布局</blockquote>
       <div class="mgb15">
         <el-row :gutter="20">
           <el-col :span="8">

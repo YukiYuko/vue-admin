@@ -49,6 +49,7 @@
                     <template slot="title"><i class="el-icon-star-on"></i>js</template>
                     <el-menu-item index="requestAnimationFrame">requestAnimationFrame</el-menu-item>
                     <el-menu-item index="canvas">canvas</el-menu-item>
+                    <el-menu-item index="calculator">计算器</el-menu-item>
                 </el-submenu>
                 <el-submenu index="9">
                     <template slot="title"><i class="el-icon-star-on"></i>无限滚动</template>
