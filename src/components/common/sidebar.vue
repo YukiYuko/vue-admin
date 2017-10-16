@@ -10,7 +10,7 @@
         </div>
         <div class="menu">
             <el-menu :default-active="onRoutes" class="el-menu-vertical-demo menu-fff" unique-opened router>
-                <el-menu-item index="/">
+                <el-menu-item index="/welcome">
                     <i class="el-icon-setting"></i>欢迎页
                 </el-menu-item>
                 <el-menu-item index="/home">
